@@ -15,4 +15,4 @@ class DatasetConfig:
 
 @dataclass(frozen=True)
 class ModelConfig:
-    model_name: str = 'kha-white/manga-ocr-base'
+    model_name: str = 'microsoft/trocr-base-printed'
