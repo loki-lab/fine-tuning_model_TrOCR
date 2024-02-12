@@ -1,0 +1,9 @@
+transformers
+sentencepiece
+jiwer
+datasets
+evaluate
+accelerate
+matplotlib
+protobuf==3.20.1
+tensorboard
