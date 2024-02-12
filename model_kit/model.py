@@ -25,3 +25,5 @@ def tr_ocr_model(model_config, device):
     model.config.num_beams = 4
 
     return model
+
+

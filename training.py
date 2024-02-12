@@ -11,7 +11,7 @@ import os
 
 if __name__ == '__main__':
     processor = processor()
-    model = tr_ocr_model(model_config=ModelConfig(), device=check_cuda_available())
+    model = tr_ocr_model(model_config=ModelConfig.model_name, device=check_cuda_available())
 
     train_transforms = transforms.Compose([
         transforms.ColorJitter(brightness=.5, hue=.3),
