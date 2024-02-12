@@ -15,4 +15,4 @@ class DatasetConfig:
 
 @dataclass(frozen=True)
 class ModelConfig:
-    model_name: str = 'microsoft/trocr-small-handwritten'
+    model_name: str = 'microsoft/trocr-base-printed'
