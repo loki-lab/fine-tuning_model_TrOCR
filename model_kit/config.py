@@ -3,7 +3,7 @@ from dataclasses import dataclass
 
 @dataclass(frozen=True)
 class TrainingConfig:
-    batch_size: int = 16
+    batch_size: int = 32
     epochs: int = 35
     learning_rate: float = 0.00005
 
