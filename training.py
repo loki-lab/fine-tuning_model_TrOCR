@@ -62,7 +62,7 @@ if __name__ == '__main__':
 
     trainer = Seq2SeqTrainer(
         model=model,
-        tokenizer=processor.feature_extractor,
+        tokenizer=processor,
         args=training_args,
         compute_metrics=compute_cer,
         train_dataset=train_dataset,
