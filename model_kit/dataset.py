@@ -1,5 +1,6 @@
 from torch.utils.data import Dataset
 from PIL import Image
+import torch
 
 
 class CustomDataset(Dataset):
@@ -29,5 +30,5 @@ class CustomDataset(Dataset):
 
         labels = [label if label != self.processor.tokenizer.pad_token_id else -100 for label in labels]
 
-        encoding = {"pixel_values": pixel_values, "labels": labels}
+        encoding = {"pixel_values": pixel_values.squeeze(), "labels": torch.tensor(labels)}
         return encoding
