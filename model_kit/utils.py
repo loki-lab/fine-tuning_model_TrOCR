@@ -8,9 +8,8 @@ import torch
 
 
 def processor():
-    return TrOCRProcessor.from_pretrained(ModelConfig.model_name)
-
-
+    p = TrOCRProcessor.from_pretrained(ModelConfig.model_name)
+    return p
 
 
 def download_dataset(url, save_path):
@@ -47,3 +46,8 @@ def check_cuda_available():
     else:
         print("CUDA not available.")
         return "cpu"
+
+
+if __name__ == "__main__":
+    processor = processor()
+    print(processor)

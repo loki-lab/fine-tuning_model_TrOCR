@@ -33,14 +33,16 @@ if __name__ == '__main__':
         root_dir=os.path.join(DatasetConfig.data_root, "scut_train/"),
         df=train_df,
         processor=processor,
-        transforms=train_transforms
+        transforms=train_transforms,
+        max_target_length=512
     )
 
     valid_dataset = CustomDataset(
         root_dir=os.path.join(DatasetConfig.data_root, "scut_test/"),
         df=test_df,
         processor=processor,
-        transforms=train_transforms
+        transforms=train_transforms,
+        max_target_length=512
     )
 
     optimizer_metric = AdamW(model.parameters(), lr=TrainingConfig.learning_rate, weight_decay=0.0005)
