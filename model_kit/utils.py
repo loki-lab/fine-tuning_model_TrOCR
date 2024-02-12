@@ -3,12 +3,16 @@ from urllib.request import urlretrieve
 import os
 import matplotlib.pyplot as plt
 from model_kit.config import ModelConfig
-from transformers import AutoImageProcessor
+from transformers import AutoImageProcessor, AutoTokenizer
 import torch
 
 
 def processor():
     return AutoImageProcessor.from_pretrained(ModelConfig.model_name)
+
+
+def tokenizer():
+    return AutoTokenizer.from_pretrained(ModelConfig.model_name)
 
 
 def download_dataset(url, save_path):
