@@ -5,7 +5,7 @@ from dataclasses import dataclass
 class TrainingConfig:
     batch_size: int = 32
     epochs: int = 35
-    learning_rate: float = 0.00005
+    learning_rate: float = 0.0001
 
 
 @dataclass(frozen=True)
