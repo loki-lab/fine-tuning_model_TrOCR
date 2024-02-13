@@ -64,7 +64,7 @@ if __name__ == '__main__':
         model=model,
         tokenizer=processor,
         args=training_args,
-        compute_metrics=compute_accuracy,
+        compute_metrics=compute_cer,
         train_dataset=train_dataset,
         eval_dataset=valid_dataset,
         data_collator=default_data_collator
