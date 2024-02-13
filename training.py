@@ -34,7 +34,7 @@ if __name__ == '__main__':
         df=train_df,
         processor=processor,
         transforms=train_transforms,
-        max_target_length=128
+        max_target_length=64
     )
 
     valid_dataset = CustomDataset(
@@ -42,7 +42,7 @@ if __name__ == '__main__':
         df=test_df,
         processor=processor,
         transforms=train_transforms,
-        max_target_length=128
+        max_target_length=64
     )
 
     optimizer_metric = AdamW(model.parameters(), lr=TrainingConfig.learning_rate, weight_decay=0.0005)

@@ -18,7 +18,7 @@ def tr_ocr_model(model_config, device):
     model.config.vocab_size = model.config.decoder.vocab_size
     model.config.eos_token_id = processor.tokenizer.eos_token_id
 
-    model.config.max_length = 128
+    model.config.max_length = 64
     model.config.early_stopping = True
     model.config.no_repeat_ngram_size = 3
     model.config.length_penalty = 2.0
