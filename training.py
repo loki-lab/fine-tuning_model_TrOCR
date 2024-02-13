@@ -19,6 +19,7 @@ if __name__ == '__main__':
         transforms.RandomPerspective(distortion_scale=0.6, p=1.0),
         transforms.RandomPosterize(bits=2),
         transforms.RandomSolarize(threshold=192.0),
+        transforms.RandomEqualize()
     ])
 
     train_df = pd.read_fwf(
