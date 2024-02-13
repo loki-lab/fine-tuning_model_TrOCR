@@ -4,7 +4,7 @@ from torchvision.transforms import transforms
 from model_kit.config import DatasetConfig, ModelConfig, TrainingConfig
 from model_kit.model import tr_ocr_model
 from transformers import Seq2SeqTrainingArguments, Seq2SeqTrainer, default_data_collator
-from model_kit.metrics import compute_cer
+from model_kit.metrics import compute_cer, compute_accuracy
 from torch.optim import AdamW
 import pandas as pd
 import os
@@ -64,7 +64,7 @@ if __name__ == '__main__':
         model=model,
         tokenizer=processor,
         args=training_args,
-        compute_metrics=compute_cer,
+        compute_metrics=compute_accuracy,
         train_dataset=train_dataset,
         eval_dataset=valid_dataset,
         data_collator=default_data_collator
