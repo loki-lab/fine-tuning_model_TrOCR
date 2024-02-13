@@ -3,7 +3,7 @@ from model_kit.utils import processor
 
 processor = processor()
 cer_metric = evaluate.load("cer")
-acc_metric = evaluate.load("acc")
+acc_metric = evaluate.load("accuracy")
 
 
 def compute_cer(pred):
